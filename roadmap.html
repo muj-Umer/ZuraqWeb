@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story & Roadmap — Zuraq</title>
+  <meta name="description" content="Zuraq's mission: bridging worlds through fashion. Explore our 3D roadmap of cultural chapters being researched, credited, and crafted into premium streetwear.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="silk-nav" id="main-nav">
+    <div class="nav-links nav-left">
+      <a href="index.html">Home</a>
+      <a href="azulejo.html">Collection</a>
+    </div>
+
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo-uploaded-2.png" alt="Zuraq">
+    </a>
+
+    <div class="nav-links nav-right">
+      <a href="roadmap.html" class="active">Story</a>
+      <a href="#" data-open-inquiry>Inquire</a>
+    </div>
+
+    <button class="nav-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="azulejo.html">Azulejo Hoodie</a>
+    <a href="aryan.html">Aryan Jacket</a>
+    <a href="roadmap.html" class="active">Our Story</a>
+    <a href="#" data-open-inquiry>Inquire</a>
+  </div>
+
+  <!-- ====== 3D HERO ====== -->
+  <section class="hero" data-route-section="hero">
+    <div class="scene-canvas" id="story-hero-canvas"></div>
+
+    <div class="editorial-hero">
+      <div class="editorial-hero-center">
+        <h1 class="editorial-hero-title">The Road<br>We Walk</h1>
+        <p class="body-serif" style="max-width: 50ch; margin: 0 auto; margin-top: var(--space-xl);">
+          Every garment begins with a question: how can fashion honor the past while speaking to the present?
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== BRAND ORIGIN ====== -->
+  <section class="section section--white section-3d">
+    <div class="scene-canvas" id="story-motifs"></div>
+    <div class="section-inner">
+      <div class="craft-grid">
+
+        <div class="craft-text reveal-left">
+          <p class="accent-text" style="margin-bottom: var(--space-md);">The Origin</p>
+          <h2>What Is<br>Zuraq?</h2>
+          <p>
+            Zuraq — derived from the Arabic word for "blue" (أزرق) — was born from a simple observation:
+            the same geometric patterns appear across vastly different cultures, connected by the ancient trade
+            routes that once linked East and West.
+          </p>
+          <p>
+            We are a cultural streetwear studio that treats each collection as a research project.
+            Before a single stitch is sewn, we spend months studying the visual traditions we're engaging with.
+          </p>
+          <p>
+            The result is clothing that doesn't just reference culture — it converses with it.
+            Bold enough for the street, refined enough for the gallery.
+          </p>
+        </div>
+
+        <div class="craft-image reveal-right depth-shadow">
+          <img src="images/craft-detail.png" alt="Zuraq fabric craftsmanship" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== VALUES (Glass Cards) ====== -->
+  <section class="section section--cream">
+    <div class="section-inner" style="text-align: center; margin-bottom: var(--space-2xl);">
+      <div class="reveal">
+        <p class="accent-text" style="margin-bottom: var(--space-md);">Our Ethos</p>
+        <h2>Three Principles</h2>
+      </div>
+    </div>
+
+    <div class="story-columns stagger-children" style="max-width: 1100px; margin: 0 auto;">
+
+      <div class="story-column glass-card reveal depth-shadow">
+        <div class="story-column-icon">
+          <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="20" fill="none" stroke="var(--brown)" stroke-width="1"/>
+            <path d="M25 8 L25 42" stroke="var(--brown-light)" stroke-width="0.8"/>
+            <path d="M8 25 L42 25" stroke="var(--brown-light)" stroke-width="0.8"/>
+            <circle cx="25" cy="25" r="6" fill="none" stroke="var(--brown)" stroke-width="0.6"/>
+          </svg>
+        </div>
+        <h3>Research First</h3>
+        <p>Every collection begins with deep historical and cultural research. We study primary sources, visit archives, and consult with cultural experts before designing.</p>
+      </div>
+
+      <div class="story-column glass-card reveal depth-shadow">
+        <div class="story-column-icon">
+          <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="8" width="34" height="34" fill="none" stroke="var(--brown)" stroke-width="1"/>
+            <path d="M8 8 L42 42" stroke="var(--brown-light)" stroke-width="0.8"/>
+            <path d="M42 8 L8 42" stroke="var(--brown-light)" stroke-width="0.8"/>
+            <circle cx="25" cy="25" r="8" fill="none" stroke="var(--brown)" stroke-width="0.6"/>
+          </svg>
+        </div>
+        <h3>Credit Always</h3>
+        <p>Every motif and technique is attributed to its cultural origin. Our packaging always tells the full story — who made this, and where it comes from.</p>
+      </div>
+
+      <div class="story-column glass-card reveal depth-shadow">
+        <div class="story-column-icon">
+          <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25 5 L45 25 L25 45 L5 25 Z" fill="none" stroke="var(--brown)" stroke-width="1"/>
+            <path d="M25 13 L37 25 L25 37 L13 25 Z" fill="none" stroke="var(--brown-light)" stroke-width="0.8"/>
+            <circle cx="25" cy="25" r="5" fill="var(--brown)" opacity="0.1"/>
+          </svg>
+        </div>
+        <h3>Craft Over Scale</h3>
+        <p>We choose small-batch production with artisan partners over mass manufacturing. Each piece is numbered, each run is limited.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ====== CULTURAL CHAPTERS TIMELINE ====== -->
+  <section class="section section--white" id="roadmap">
+    <div class="section-inner" style="text-align: center; margin-bottom: var(--space-2xl);">
+      <div class="reveal">
+        <p class="accent-text" style="margin-bottom: var(--space-md);">The Roadmap</p>
+        <h2>Cultural Chapters</h2>
+        <p class="body-serif" style="max-width: 50ch; margin: var(--space-md) auto 0;">
+          Each collection is a chapter in a larger story. Here's the journey we've planned.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <p class="timeline-date">Chapter I · 2025</p>
+          <h3>The Iberian-Islamic Bridge</h3>
+          <p>Our first chapter explores Portuguese azulejo tilework and Middle Eastern geometric art.</p>
+          <div class="preorder-badge" style="margin-top: var(--space-sm);">Active — Pre-Orders Open</div>
+        </div>
+        <div class="timeline-visual glass-card depth-shadow" style="display: flex; align-items: center; justify-content: center;">
+          <img src="images/azulejo-hoodie.png" alt="Azulejo Hoodie" style="width: 65%; height: auto; object-fit: contain;">
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <p class="timeline-date">Chapter II · 2025</p>
+          <h3>The Central Asian Thread</h3>
+          <p>Central Asian textile traditions — from nomadic weaving to Silk Road trade.</p>
+          <div class="preorder-badge" style="margin-top: var(--space-sm); background: rgba(160, 131, 77, 0.08); border-color: rgba(160, 131, 77, 0.2); color: var(--gold);">In Production</div>
+        </div>
+        <div class="timeline-visual glass-card depth-shadow" style="display: flex; align-items: center; justify-content: center;">
+          <img src="images/aryan-jacket.png" alt="Aryan Jacket" style="width: 65%; height: auto; object-fit: contain;">
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <p class="timeline-date">Chapter III · 2026</p>
+          <h3>The North African Weave</h3>
+          <p>Berber textile traditions — geometric symbols as a visual language for nomadic communities across the Sahara.</p>
+          <div style="margin-top: var(--space-sm); padding: 7px 14px; display: inline-block; background: rgba(60, 36, 21, 0.03); border: 1px solid rgba(60, 36, 21, 0.08); font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--brown-soft);">Research Phase</div>
+        </div>
+        <div class="timeline-visual glass-card depth-shadow"></div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <p class="timeline-date">Chapter IV · 2026</p>
+          <h3>The East Asian Silk</h3>
+          <p>Chinese silk traditions and Japanese textile arts — where precision meets philosophy.</p>
+          <div style="margin-top: var(--space-sm); padding: 7px 14px; display: inline-block; background: rgba(60, 36, 21, 0.03); border: 1px solid rgba(60, 36, 21, 0.08); font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--brown-soft);">Concept Phase</div>
+        </div>
+        <div class="timeline-visual glass-card depth-shadow"></div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <p class="timeline-date">Chapter V · 2027</p>
+          <h3>The Andean Textile</h3>
+          <p>The rich textile heritage of South American indigenous communities.</p>
+          <div style="margin-top: var(--space-sm); padding: 7px 14px; display: inline-block; background: rgba(60, 36, 21, 0.03); border: 1px solid rgba(60, 36, 21, 0.08); font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--brown-soft);">Vision Phase</div>
+        </div>
+        <div class="timeline-visual glass-card depth-shadow"></div>
+        <div class="timeline-dot"></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ====== PARTNERSHIPS ====== -->
+  <section class="partnership-section section--cream" id="partnerships">
+    <div class="section-inner reveal">
+      <p class="accent-text" style="margin-bottom: var(--space-md);">Collaborate With Us</p>
+      <h2>Cultural Partnerships</h2>
+      <p class="body-serif">
+        We seek partnerships with cultural institutions, museums, galleries,
+        and artisan cooperatives who share our commitment to preserving textile heritage.
+      </p>
+
+      <div style="max-width: 650px; margin: var(--space-xl) auto; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+        <div class="glass-card depth-shadow" style="padding: var(--space-lg); text-align: left;">
+          <h3 style="font-size: 1.05rem; margin-bottom: var(--space-xs);">For Institutions</h3>
+          <p style="color: var(--brown-light); font-size: 0.95rem; line-height: 1.8;">
+            Partner with us to bring textile heritage to new audiences. Revenue sharing, credited collaborations.
+          </p>
+        </div>
+        <div class="glass-card depth-shadow" style="padding: var(--space-lg); text-align: left;">
+          <h3 style="font-size: 1.05rem; margin-bottom: var(--space-xs);">For Artisans</h3>
+          <p style="color: var(--brown-light); font-size: 0.95rem; line-height: 1.8;">
+            Join our artisan network for fair-trade production. Consistent work, fair wages, and global exposure.
+          </p>
+        </div>
+      </div>
+
+      <button class="btn-primary" data-open-inquiry>Start a Conversation</button>
+    </div>
+  </section>
+
+
+  <!-- ====== NEWSLETTER ====== -->
+  <section class="newsletter-section section--dark">
+    <div class="section-inner reveal">
+      <p class="accent-text" style="margin-bottom: var(--space-md); color: var(--warm-gray);">Stay Connected</p>
+      <h2>Follow the Journey</h2>
+      <p class="body-serif" style="color: var(--warm-gray);">
+        Be the first to know about new cultural chapters, limited drops, and collaborative events.
+      </p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <img src="images/logo.png" alt="Zuraq" class="footer-brand-logo">
+        <p class="footer-tagline">Bridging worlds through fashion</p>
+      </div>
+      <div class="footer-links">
+        <h4>Collection</h4>
+        <a href="azulejo.html">The Azulejo Hoodie</a>
+        <a href="aryan.html">The Aryan Jacket</a>
+      </div>
+      <div class="footer-links">
+        <h4>Brand</h4>
+        <a href="roadmap.html">Our Story</a>
+        <a href="#" data-open-inquiry>Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Zuraq. All rights reserved. Crafted with cultural reverence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Inquiry Modal -->
+  <div class="inquiry-overlay"></div>
+  <div class="inquiry-panel">
+    <button class="inquiry-close" aria-label="Close">✕</button>
+    <p class="accent-text" style="margin-bottom: var(--space-xs);">Get in Touch</p>
+    <h2>Inquire</h2>
+    <p class="body-serif">For partnerships, collaborations, or custom pieces.</p>
+    <form>
+      <div class="form-group"><label for="inquiry-name">Name</label><input type="text" id="inquiry-name" placeholder="Your name" required></div>
+      <div class="form-group"><label for="inquiry-email">Email</label><input type="email" id="inquiry-email" placeholder="your@email.com" required></div>
+      <div class="form-group"><label for="inquiry-type">Inquiry Type</label>
+        <select id="inquiry-type"><option value="">Select type...</option><option value="institution">Institution Partnership</option><option value="artisan">Artisan Partnership</option><option value="gallery">Gallery Collaboration</option><option value="other">Other</option></select>
+      </div>
+      <div class="form-group"><label for="inquiry-message">Message</label><textarea id="inquiry-message" placeholder="Tell us about your collaboration vision..."></textarea></div>
+      <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Send Inquiry</button>
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="three-scenes.js"></script>
+  <script src="product-viewer.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

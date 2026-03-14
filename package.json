@@ -1,0 +1,8 @@
+{
+  "name": "zuraq-web",
+  "version": "1.0.0",
+  "description": "Zuraq - Bridging Worlds Through Fashion",
+  "scripts": {
+    "dev": "npx -y live-server --port=8080 --no-browser"
+  }
+}

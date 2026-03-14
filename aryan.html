@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Aryan Jacket — Zuraq</title>
+  <meta name="description" content="The Aryan Jacket by Zuraq. A tribute to ancient Central Asian textile traditions, featuring interactive 3D hotspots revealing the heritage behind each motif.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="silk-nav" id="main-nav">
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo.png" alt="Zuraq">
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="roadmap.html">Story</a>
+      <a href="#" data-open-inquiry>Inquire</a>
+    </div>
+    <button class="nav-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="azulejo.html">Azulejo Hoodie</a>
+    <a href="aryan.html">Aryan Jacket</a>
+    <a href="roadmap.html">Our Story</a>
+    <a href="#" data-open-inquiry>Inquire</a>
+  </div>
+
+
+  <!-- ====== PRODUCT HERO WITH INTERACTIVE HOTSPOTS ====== -->
+  <section class="product-hero">
+    <div class="product-hero-image product-viewer hotspot-container" id="aryan-viewer">
+      <img src="images/aryan-jacket.png" alt="The Aryan Jacket by Zuraq" class="viewer-image">
+
+      <!-- Interactive Hotspots -->
+      <div class="hotspot" style="top: 18%; left: 45%;"
+           data-title="Collar Detailing"
+           data-description="Hand-finished collar with heritage stitch pattern drawn from Central Asian nomadic weaving traditions. Each stitch is a nod to the artisan families who developed this technique over centuries."></div>
+
+      <div class="hotspot" style="top: 38%; left: 55%;"
+           data-title="Embroidered Motif"
+           data-description="An eight-pointed star motif — a symbol of protection and prosperity found across Silk Road textile traditions from Bukhara to Isfahan. Rendered in tonal thread to honor the subtlety of the original artisans."></div>
+
+      <div class="hotspot" style="top: 55%; left: 35%;"
+           data-title="Premium Fabric"
+           data-description="Heavyweight woven fabric with a structural hand-feel. The base cloth is sourced from cooperative mills that specialize in heritage weaving techniques, ensuring both quality and fair labor practices."></div>
+
+      <div class="hotspot" style="top: 72%; left: 50%;"
+           data-title="Artisan Hardware"
+           data-description="Custom-cast snap closures with geometric relief patterns. Each closure is individually finished by metalwork artisans using traditional sand-casting methods."></div>
+
+      <div class="viewer-drag-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+        </svg>
+        Click hotspots to explore
+      </div>
+      <div class="floating-label" style="top: var(--space-md); left: var(--space-md);">Interactive View</div>
+    </div>
+
+    <div class="product-hero-info">
+      <p class="product-collection">Chapter II · Central Asian Heritage</p>
+      <div class="preorder-badge" style="background: rgba(160, 131, 77, 0.08); border-color: rgba(160, 131, 77, 0.2); color: var(--gold);">Coming Soon</div>
+      <h1 class="product-title">The Aryan</h1>
+      <p class="product-subtitle">
+        A jacket born from the ancient textile traditions of Central Asia — where hand-loomed fabrics
+        carried stories across generations of artisan families.
+      </p>
+      <p class="product-price">$365</p>
+
+      <ul class="product-details-list">
+        <li>Hand-embroidered heritage motifs</li>
+        <li>Premium heavyweight woven fabric</li>
+        <li>Traditional vegetable-dyed threads</li>
+        <li>Artisan-crafted snap closures</li>
+        <li>Inner lining with Silk Road route map print</li>
+        <li>Limited edition — artist-signed label</li>
+      </ul>
+
+      <div class="size-selector">
+        <span class="size-selector-label">Select Size</span>
+        <div class="size-options">
+          <button class="size-option">XS</button>
+          <button class="size-option">S</button>
+          <button class="size-option selected">M</button>
+          <button class="size-option">L</button>
+          <button class="size-option">XL</button>
+          <button class="size-option">XXL</button>
+        </div>
+      </div>
+
+      <button class="btn-secondary" data-open-inquiry style="width: 100%; justify-content: center;">
+        Notify Me / Inquire
+      </button>
+      <p style="margin-top: var(--space-sm); font-family: var(--font-ui); font-size: 0.65rem; color: var(--brown-soft); letter-spacing: 0.1em; text-align: center;">
+        Register interest for early access to this drop
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ====== CRAFT LINEAGE (3D background) ====== -->
+  <section class="section section--white section-3d">
+    <div class="scene-canvas" id="aryan-motifs"></div>
+    <div class="section-inner" style="text-align: center; margin-bottom: var(--space-2xl);">
+      <div class="reveal">
+        <p class="accent-text" style="margin-bottom: var(--space-md);">Artisanal Lineage</p>
+        <h2>From Ancient Loom<br>to Modern Street</h2>
+        <p class="body-serif" style="max-width: 50ch; margin: var(--space-md) auto 0;">
+          The Aryan Jacket traces a continuous thread from Central Asian textile traditions
+          through centuries of artisan families to the present day.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <p class="timeline-date">Ancient Origins</p>
+          <h3>The Nomadic Weavers</h3>
+          <p>For millennia, Central Asian nomadic communities developed intricate textile traditions. Each tribe carried distinct motifs — visual markers of identity, belief, and kinship.</p>
+        </div>
+        <div class="timeline-visual glass-card depth-shadow"></div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <p class="timeline-date">The Silk Road Era</p>
+          <h3>Trade Route Exchange</h3>
+          <p>As textiles traveled the Silk Road, patterns cross-pollinated. Persian motifs met Chinese silk techniques; Indian dye knowledge merged with Turkish embroidery.</p>
+        </div>
+        <div class="timeline-visual glass-card depth-shadow"></div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <p class="timeline-date">Artisan Workshops</p>
+          <h3>Generational Skill</h3>
+          <p>In workshops from Bukhara to Isfahan, master artisans passed techniques from parent to child. Each stitch carried the weight of tradition.</p>
+        </div>
+        <div class="timeline-visual glass-card depth-shadow"></div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <p class="timeline-date">Zuraq · 2025</p>
+          <h3>Modern Interpretation</h3>
+          <p>The Aryan Jacket translates this lineage into contemporary streetwear — conversing with history, not copying it.</p>
+        </div>
+        <div class="timeline-visual glass-card depth-shadow"></div>
+        <div class="timeline-dot"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== HERITAGE NOTE (Glass card) ====== -->
+  <section class="section section--cream">
+    <div class="section-inner">
+      <div class="craft-grid">
+
+        <div class="reveal-left" style="display: flex; align-items: center; justify-content: center;">
+          <div class="glass-card depth-shadow" style="width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; padding: var(--space-xl);">
+            <svg viewBox="0 0 200 200" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="20" width="160" height="160" fill="none" stroke="var(--brown)" stroke-width="0.8" opacity="0.4"/>
+              <path d="M100 20 L180 100 L100 180 L20 100 Z" fill="none" stroke="var(--brown)" stroke-width="1" opacity="0.6"/>
+              <circle cx="100" cy="100" r="50" fill="none" stroke="var(--brown-light)" stroke-width="0.6"/>
+              <path d="M100 50 L150 100 L100 150 L50 100 Z" fill="none" stroke="var(--brown)" stroke-width="0.8" opacity="0.4"/>
+              <circle cx="100" cy="100" r="20" fill="none" stroke="var(--brown-light)" stroke-width="0.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="craft-text reveal-right">
+          <p class="accent-text" style="margin-bottom: var(--space-md);">A Note on Heritage</p>
+          <h2>Honoring Ancient<br>Craftsmanship</h2>
+          <p>
+            The name "Aryan" references the ancient Indo-Iranian word meaning "noble" —
+            a term that predates centuries of misappropriation. In its original context, it describes
+            the noble traditions of craft and cultural exchange.
+          </p>
+          <p>
+            Every geometric form — the intertwining vines, the eight-pointed stars, the nested
+            diamond borders — carries specific meaning: protection, prosperity, connection
+            to the natural world.
+          </p>
+
+          <div class="glass-card" style="margin-top: var(--space-xl); padding: var(--space-md); border-left: 2px solid var(--brown);">
+            <p style="font-family: var(--font-body); font-style: italic; color: var(--brown-light); font-size: 0.95rem;">
+              "True craftsmanship lives in the conversation between maker and tradition.
+              The Aryan Jacket is our contribution to that conversation."
+            </p>
+            <p style="font-family: var(--font-ui); font-size: 0.65rem; color: var(--brown-soft); letter-spacing: 0.1em; margin-top: var(--space-xs);">— Zuraq Design Team</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== INQUIRY CTA ====== -->
+  <section class="section section--dark" style="text-align: center;">
+    <div class="section-inner reveal">
+      <p class="accent-text" style="margin-bottom: var(--space-md); color: var(--warm-gray);">Get Early Access</p>
+      <h2 style="margin-bottom: var(--space-md);">Register Your Interest</h2>
+      <p class="body-serif" style="max-width: 48ch; margin: 0 auto var(--space-xl); color: var(--warm-gray);">
+        The Aryan Jacket is currently in artisan production. Register your interest
+        for early access, or inquire about custom sizing.
+      </p>
+      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+        <button class="btn-primary" data-open-inquiry>Inquire About This Piece</button>
+        <a href="azulejo.html" class="btn-secondary">← View The Azulejo Hoodie</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <img src="images/logo.png" alt="Zuraq" class="footer-brand-logo">
+        <p class="footer-tagline">Bridging worlds through fashion</p>
+      </div>
+      <div class="footer-links">
+        <h4>Collection</h4>
+        <a href="azulejo.html">The Azulejo Hoodie</a>
+        <a href="aryan.html">The Aryan Jacket</a>
+      </div>
+      <div class="footer-links">
+        <h4>Brand</h4>
+        <a href="roadmap.html">Our Story</a>
+        <a href="#" data-open-inquiry>Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Zuraq. All rights reserved. Crafted with cultural reverence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Inquiry Modal -->
+  <div class="inquiry-overlay"></div>
+  <div class="inquiry-panel">
+    <button class="inquiry-close" aria-label="Close">✕</button>
+    <p class="accent-text" style="margin-bottom: var(--space-xs);">Get in Touch</p>
+    <h2>Inquire</h2>
+    <p class="body-serif">For custom pieces, collaborative drops, or partnership opportunities.</p>
+    <form>
+      <div class="form-group"><label for="inquiry-name">Name</label><input type="text" id="inquiry-name" placeholder="Your name" required></div>
+      <div class="form-group"><label for="inquiry-email">Email</label><input type="email" id="inquiry-email" placeholder="your@email.com" required></div>
+      <div class="form-group"><label for="inquiry-type">Inquiry Type</label>
+        <select id="inquiry-type"><option value="">Select type...</option><option value="aryan-interest">Aryan Jacket — Early Access</option><option value="custom">Custom / Bespoke</option><option value="collaboration">Collaboration</option><option value="other">Other</option></select>
+      </div>
+      <div class="form-group"><label for="inquiry-message">Message</label><textarea id="inquiry-message" placeholder="Tell us about your vision..."></textarea></div>
+      <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Send Inquiry</button>
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="three-scenes.js"></script>
+  <script src="product-viewer.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
