@@ -1,0 +1,13 @@
+[
+  {
+    "name": "General Settings",
+    "settings": [
+      {
+        "type": "text",
+        "id": "footer_text",
+        "label": "Footer Text",
+        "default": "Bridging worlds through fashion"
+      }
+    ]
+  }
+]

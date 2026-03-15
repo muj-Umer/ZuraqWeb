@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title }} — {{ shop.name }}</title>
+  
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+
+  {{ content_for_header }}
+
+  {{ 'styles.css' | asset_url | stylesheet_tag }}
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+</head>
+
+<body class="template-{{ template | replace: '.', '-' | handle }}">
+
+  <!-- Navigation -->
+  <nav class="silk-nav" id="main-nav">
+    <div class="nav-links nav-left">
+      <a href="{{ routes.root_url }}">Home</a>
+      <a href="{{ routes.collections_url }}">Collection</a>
+    </div>
+
+    <a href="{{ routes.root_url }}" class="nav-brand">
+      <img src="{{ 'logo-uploaded-2.png' | asset_url }}" alt="{{ shop.name }}">
+    </a>
+
+    <div class="nav-links nav-right">
+      <a href="/pages/story">Story</a>
+      <a href="#" data-open-inquiry>Inquire</a>
+    </div>
+
+    <button class="nav-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="{{ routes.root_url }}">Home</a>
+    <a href="{{ routes.collections_url }}">Collection</a>
+    <a href="/pages/story">Our Story</a>
+    <a href="#" data-open-inquiry>Inquire</a>
+  </div>
+
+  <main role="main">
+    {{ content_for_layout }}
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <h4>Collection</h4>
+        {% for collection in collections limit: 3 %}
+          <a href="{{ collection.url }}">{{ collection.title }}</a>
+        {% endfor %}
+      </div>
+      <div class="footer-brand-center">
+        <img src="{{ 'logo-uploaded-2.png' | asset_url }}" alt="{{ shop.name }}" class="footer-brand-logo">
+        <p class="footer-tagline">{{ shop.description }}</p>
+      </div>
+      <div class="footer-links right-align">
+        <h4>Brand</h4>
+        <a href="/pages/story">Our Story</a>
+        <a href="#" data-open-inquiry>Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© {{ 'now' | date: "%Y" }} {{ shop.name }}. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== INQUIRY MODAL (Kept for continuity) ====== -->
+  <div class="inquiry-overlay"></div>
+  <div class="inquiry-panel">
+    <button class="inquiry-close" aria-label="Close">✕</button>
+    <p class="accent-text" style="margin-bottom: var(--space-xs);">Get in Touch</p>
+    <h2>Inquire</h2>
+    <p class="body-serif">For custom pieces, collaborative drops, or partnership opportunities.</p>
+    <form>
+      <div class="form-group">
+        <label for="inquiry-name">Name</label>
+        <input type="text" id="inquiry-name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label for="inquiry-email">Email</label>
+        <input type="email" id="inquiry-email" placeholder="your@email.com" required>
+      </div>
+      <div class="form-group">
+        <label for="inquiry-message">Message</label>
+        <textarea id="inquiry-message" placeholder="Tell us about your vision..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Send Inquiry</button>
+    </form>
+  </div>
+
+  <!-- Three.js CDN -->
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="{{ 'three-scenes.js' | asset_url }}"></script>
+  <script src="{{ 'product-viewer.js' | asset_url }}"></script>
+  <script src="{{ 'main.js' | asset_url }}"></script>
+</body>
+</html>

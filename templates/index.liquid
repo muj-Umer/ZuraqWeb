@@ -1,0 +1,57 @@
+<!-- ====== 3D HERO ====== -->
+<section class="hero" data-route-section="hero">
+  <!-- Three.js Canvas Background -->
+  <div class="scene-canvas" id="hero-canvas"></div>
+
+  <!-- Editorial Brutalism Content Overlay -->
+  <div class="editorial-hero">
+    <div class="editorial-top-right">
+      <p class="editorial-hero-meta">EST. MMXXVI</p>
+    </div>
+
+    <div class="rosetta-block">
+      ブリッジング・カルチャー / ثقافة الشارع / CULTURA DE RUA / STREETWEAR / ブリッジング・カルチャー / ثقافة الشارع / CULTURA DE RUA / STREETWEAR / ブリッジング・カルチャー / ثقافة الشارع / CULTURA DE RUA / STREETWEAR / ブリッジング・カルチャー / ثقافة الشارع / CULTURA DE RUA / STREETWEAR
+    </div>
+
+    <h1 class="editorial-hero-title" style="font-family: var(--font-body); font-weight: normal; font-style: normal;">ZURAQ</h1>
+
+    <div class="editorial-bottom-left">
+      <p class="editorial-hero-italic">Bridging worlds through fashion.</p>
+      <p class="editorial-hero-meta">Cultural Streetwear</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== DROP VAULT (REDESIGNED) ====== -->
+<section class="vault-section editorial-vault" data-route-section="drops">
+  <div class="vault-canvas" id="drop-vault-canvas"></div>
+  <div class="editorial-vault-inner">
+    <div class="editorial-vault-header stagger-children">
+      <h2 class="editorial-headline reveal">CURRENT DROPS</h2>
+      <p class="editorial-subline reveal">Each piece is a limited run — once a chapter closes, it becomes heritage.</p>
+    </div>
+
+    <div class="editorial-drops-grid stagger-children">
+      {% for product in collections['all'].products limit: 2 %}
+        <a href="{{ product.url }}" class="editorial-product-card reveal" style="--delay: {{ forloop.index }};" id="card-{{ product.handle }}">
+          <div class="editorial-product-image">
+            {% if product.available == false %}
+              <span class="editorial-badge editorial-badge--outline">COMING SOON</span>
+            {% else %}
+              <span class="editorial-badge">PRE-ORDER</span>
+            {% endif %}
+            <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}">
+            <div class="editorial-image-overlay"></div>
+          </div>
+          <div class="editorial-product-meta">
+            <div>
+              <h3 class="editorial-product-name">{{ product.title }}</h3>
+              <p class="editorial-product-desc">{{ product.metafields.custom.short_description | default: product.type }}</p>
+            </div>
+            <p class="editorial-product-price">{{ product.price | money }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<!-- ====== COLLECTION HERO ====== -->
+<header class="collection-hero">
+  <div class="collection-hero-inner reveal">
+    <p class="accent-text">The Anthology</p>
+    <h1 class="editorial-headline">{{ collection.title | upcase }}</h1>
+    <p class="editorial-subline">{{ collection.description }}</p>
+  </div>
+</header>
+
+<!-- ====== CATEGORY NAVIGATION (Dynamic based on store collections) ====== -->
+<nav class="category-nav reveal">
+  <div class="category-nav-inner">
+    {% for coll in collections %}
+      <a href="#{{ coll.handle }}" class="category-link">{{ coll.title }}</a>
+    {% endfor %}
+  </div>
+</nav>
+
+{% for coll in collections %}
+  <section id="{{ coll.handle }}" class="collection-section {% if forloop.index == 2 %}section--dark{% endif %}">
+    <div class="section-header reveal">
+      <div class="section-title-wrap">
+        <span class="section-number">0{{ forloop.index }}</span>
+        <h2 class="section-title">{{ coll.title }}</h2>
+      </div>
+      <p class="section-desc">{{ coll.description }}</p>
+    </div>
+
+    <!-- Products in this collection -->
+    <div class="sub-category-wrap reveal">
+      {% for product in coll.products %}
+        <div class="sub-category">
+          <h3 class="sub-category-title">{{ product.type | default: 'Piece' }}</h3>
+          <div class="editorial-drops-grid">
+            <a href="{{ product.url }}" class="editorial-product-card" id="card-{{ product.handle }}">
+              <div class="editorial-product-image">
+                {% unless product.available %}
+                  <span class="editorial-badge editorial-badge--outline">COMING SOON</span>
+                {% endunless %}
+                <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}">
+                <div class="editorial-image-overlay"></div>
+              </div>
+              <div class="editorial-product-meta">
+                <div>
+                  <h4 class="editorial-product-name">{{ product.title }}</h4>
+                  <p class="editorial-product-desc">{{ product.type }}</p>
+                </div>
+                <p class="editorial-product-price">{{ product.price | money }}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}

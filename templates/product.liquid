@@ -1,0 +1,62 @@
+<!-- ====== 3D PRODUCT HERO ====== -->
+<section class="product-hero">
+  <!-- Interactive Drag-to-Rotate Product Viewer -->
+  <div class="product-hero-image product-viewer {% if product.handle == 'the-aryan' %}hotspot-container{% endif %}" id="{{ product.handle }}-viewer">
+    <img src="{{ product.featured_image | img_url: '1200x' }}" alt="{{ product.title }}" class="viewer-image">
+    
+    {% if product.handle == 'the-aryan' %}
+      <!-- Hotspots for Aryan Jacket -->
+      <div class="hotspot" style="top: 18%; left: 45%;" data-title="Collar Detailing" data-description="Hand-finished collar with heritage stitch pattern."></div>
+      <div class="hotspot" style="top: 38%; left: 55%;" data-title="Embroidered Motif" data-description="An eight-pointed star motif."></div>
+    {% endif %}
+
+    <div class="viewer-drag-hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+      Drag to rotate
+    </div>
+    <div class="floating-label" style="top: var(--space-md); left: var(--space-md);">3D View</div>
+  </div>
+
+  <div class="product-hero-info">
+    <p class="product-collection">{{ product.metafields.custom.collection_note | default: 'Chapter I' }}</p>
+    {% if product.available %}
+      <div class="preorder-badge">Available Now</div>
+    {% else %}
+      <div class="preorder-badge" style="background: rgba(160, 131, 77, 0.08); border-color: rgba(160, 131, 77, 0.2); color: var(--gold);">Coming Soon</div>
+    {% endif %}
+    
+    <h1 class="product-title">{{ product.title }}</h1>
+    <p class="product-subtitle">{{ product.description | strip_html | truncate: 160 }}</p>
+    <p class="product-price">{{ product.price | money }}</p>
+
+    {% form 'product', product %}
+      <div class="size-selector">
+        <span class="size-selector-label">Select Size</span>
+        <select name="id" id="variant-id" class="size-options-select">
+          {% for variant in product.variants %}
+            <option value="{{ variant.id }}" {% if variant == product.selected_or_first_available_variant %}selected{% endif %}>
+              {{ variant.title }} - {{ variant.price | money }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;" {% unless product.available %}disabled{% endunless %}>
+        {% if product.available %}Add to Cart{% else %}Sold Out{% endif %} — {{ product.price | money }}
+      </button>
+    {% endform %}
+
+    <p style="margin-top: var(--space-sm); font-family: var(--font-ui); font-size: 0.65rem; color: var(--brown-soft); letter-spacing: 0.1em; text-align: center;">
+      Estimated ship: 4–6 weeks · Free worldwide shipping
+    </p>
+  </div>
+</section>
+
+<!-- Sections for Story and Craft can be handled via Metafields or specialized blocks -->
+<section class="section section--white">
+  <div class="section-inner reveal">
+     {{ product.content }}
+  </div>
+</section>
